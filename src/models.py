@@ -77,6 +77,14 @@ class Favorites(Base):
     element_id = Column(Integer, nullable=False)
     user_id=Column(Integer, ForeignKey("users.id"))
     user = relationship(User)
+    film_id = Column(Integer, ForeignKey('films.id'))
+    film = relationship(Films)
+    person_id = Column(Integer, ForeignKey('people.id'))
+    person = relationship(People)
+    vehicle_id = Column(Integer, ForeignKey('vehicles.id'))
+    vehicle = relationship(Vehicles)
+    planet_id = Column(Integer, ForeignKey('planets.id'))
+    planet = relationship(Planets)
     
 
 
